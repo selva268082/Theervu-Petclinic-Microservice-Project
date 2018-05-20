@@ -29,7 +29,7 @@ import {environment} from '../../environments/environment';
 @Injectable()
 export class OwnerService {
 
-  private entity_url = environment.REST_API_URL +'customer/owners';
+  private entity_url = environment.REST_API_URL +'/owners';
 
   constructor(private _http: Http) {
   }

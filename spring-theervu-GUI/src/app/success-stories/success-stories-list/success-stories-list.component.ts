@@ -1,15 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {SuccessStoriesService} from '../success-stories.service';
+import {successstories} from '../successstories';
+import 'rxjs/Rx';
+import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-success-stories-list',
+ selector: 'app-success-stories-list',
   templateUrl: './success-stories-list.component.html',
   styleUrls: ['./success-stories-list.component.css']
 })
 export class SuccessStoriesListComponent implements OnInit {
+  errorMessage: string;
+  successstory: successstories[];
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private router: Router, private successService: SuccessStoriesService) {
   }
 
+  ngOnInit() {
+    this.successService.getOwners().subscribe(
+      successstory => this.successstory = successstory,
+      error => this.errorMessage = <any> error);
+  }
+/*
+  onSelect(owner: Owner) {
+    this.router.navigate(['/owners', owner.id]);
+  }
+
+  addOwner() {
+    this.router.navigate(['/owners/add']);
+  }
+*/
 }

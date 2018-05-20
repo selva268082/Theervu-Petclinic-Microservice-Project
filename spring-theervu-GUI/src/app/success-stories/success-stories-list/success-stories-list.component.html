@@ -1,3 +1,35 @@
-<p>
-  success-stories-list works!
-</p>
+<div class="container-fluid">
+  <div class="container xd-container">
+    <h2>Owners</h2>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <th>Name of Disease</th>
+          <th>Person</th>
+          <th>Place</th>
+          <th>Media Type</th>
+          <th>Link</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        <!-- <a  routerLink="/owners/{{owner.id}}" routerLinkActive="active" -->
+        <tr *ngFor="let successstory of successstories">
+          <td>{{successstory.typeofdisease}} </td>
+          <td>{{successstory.person}}</td>
+          <td>{{owner.telephone}}</td>
+          <td>
+        <tr *ngFor="let pet of owner.pets">
+          {{pet.name}}
+        </tr>
+        </td>
+        </tr>
+        </tbody>
+      </table>
+      <div>
+        <button class="btn btn-default" (click)="addOwner()">Add Owner</button>
+      </div>
+    </div>
+  </div>
+</div>
