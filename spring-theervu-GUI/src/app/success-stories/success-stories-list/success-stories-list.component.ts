@@ -11,15 +11,16 @@ import {Router} from '@angular/router';
 })
 export class SuccessStoriesListComponent implements OnInit {
   errorMessage: string;
-  successstory: successstories[];
+  successstories: successstories[];
 
   constructor(private router: Router, private successService: SuccessStoriesService) {
   }
 
   ngOnInit() {
     this.successService.getOwners().subscribe(
-      successstory => this.successstory = successstory,
+      successstories => this.successstories = successstories,
       error => this.errorMessage = <any> error);
+      alert(this.successstories);
   }
 /*
   onSelect(owner: Owner) {

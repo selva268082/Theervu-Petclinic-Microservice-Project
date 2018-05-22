@@ -23,6 +23,7 @@
 
 export const environment = {
   production: false,
-  REST_API_URL: 'http://localhost:9966/petclinic/api/'
+ // REST_API_URL: 'http://localhost:8090/petclinic/api/'
   //REST_API_URL: 'http://localhost:8080/api/'
+   REST_API_URL: 'http://localhost:8090/'
 };

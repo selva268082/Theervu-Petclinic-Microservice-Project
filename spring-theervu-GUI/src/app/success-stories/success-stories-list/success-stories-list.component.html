@@ -17,13 +17,16 @@
         <!-- <a  routerLink="/owners/{{owner.id}}" routerLinkActive="active" -->
         <tr *ngFor="let successstory of successstories">
           <td>{{successstory.typeofdisease}} </td>
-          <td>{{successstory.person}}</td>
-          <td>{{owner.telephone}}</td>
-          <td>
-        <tr *ngFor="let pet of owner.pets">
-          {{pet.name}}
-        </tr>
-        </td>
+          <td><tr *ngFor="let person of successstory.person">{{person.personName}}</tr></td>
+          <td><tr *ngFor="let person of successstory.person">{{person.personPlace}}</tr></td>
+          <td><tr><select id="type" name="type" class="form-control" [(ngModel)]="current_type">
+              <option *ngFor="let availableformat of successstory.person.availableFormat"
+                      [selected]="type.id == current_type.id ? true : null"
+                      [ngValue]="type">{{availableformat.formatType}}
+              </option>
+            </select></tr>
+          </td>
+          <td><tr *ngFor="let availableFormat of successstory.person.availableFormat">{{availableFormat.link}}</tr></td>
         </tr>
         </tbody>
       </table>
