@@ -26,9 +26,9 @@ export class SuccessStoriesListComponent implements OnInit {
   onSelect(owner: Owner) {
     this.router.navigate(['/owners', owner.id]);
   }
-
-  addOwner() {
-    this.router.navigate(['/owners/add']);
-  }
 */
+  addSuccessStory() {
+    this.router.navigate(['/successstoriesadd/']);
+  }
+ 
 }

@@ -23,10 +23,12 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 import {SuccessStoriesListComponent} from './success-stories-list/success-stories-list.component';
+import {SuccessStoriesAddComponent} from './success-stories-add/success-stories-add.component';
  
 
 const storyRoutes: Routes = [
   {path: 'allsuccessstories', component: SuccessStoriesListComponent},
+  {path: 'successstoriesadd', component: SuccessStoriesAddComponent},
 ];
 
 @NgModule({

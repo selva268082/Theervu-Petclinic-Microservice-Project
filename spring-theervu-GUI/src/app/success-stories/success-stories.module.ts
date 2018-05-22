@@ -26,6 +26,7 @@ import {SuccessStoriesListComponent} from './success-stories-list/success-storie
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {SucessStoriesRoutingModule} from './success-stories-routing.module';
+import { SuccessStoriesAddComponent } from './success-stories-add/success-stories-add.component';
  
 
 @NgModule({
@@ -36,7 +37,8 @@ import {SucessStoriesRoutingModule} from './success-stories-routing.module';
      
   ],
   declarations: [
-                 SuccessStoriesListComponent
+                 SuccessStoriesListComponent,
+                 SuccessStoriesAddComponent
     
   ],
   providers: [SuccessStoriesService]
